@@ -1,0 +1,222 @@
+
+/* general */
+
+body, html{
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	
+}
+.background-picture{
+	background-color: #AAB3AA;
+	/* For centered look that does not fill the whole screen
+	width: 80%;
+	margin: 0% 10%;*/
+	width: 100%;
+	height: 95%;
+	background-size: cover;
+}
+
+.left-nav a {
+	text-decoration: none;
+	color: #E9E8D2;
+	padding: 10px;
+	font: 20px 'Roboto';
+	margin: auto 0px;
+
+}
+.left-nav{
+	width: 100%;
+	height: 100%;
+	background: #7C8184;
+	position: absolute;
+	right: 0;
+}
+
+.nav{
+	width: 100%;
+	height: 5%;
+	position: relative;
+}
+
+
+/* projects.html css */
+
+.company-grid-view{
+	margin: 0px 10%;
+	display: grid;
+	width: 80%;
+	grid-template-columns: auto auto auto;
+	image-rendering: optimizeQuality;
+}
+
+.grid-item{
+	padding: 10px;
+	position: relative;
+}
+
+.grid-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/* enlarge on hover
+.grid-item img:hover{
+	transform: scale(1.25);
+}*/
+
+.company-view{
+	background:#AAB3AA;
+	width: 100%;
+	height: 95%;
+	background-size: cover;
+}
+
+/* projects.html description masks */
+.mask{
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+	background-color: #7C8184;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
+}
+
+.grid-item:hover .mask{
+	height: 100%;
+	
+}
+
+
+/*index.html css*/
+
+.text-and-button-box{
+	position: relative;
+	left: 10%;
+	top: 40%;
+	width: 500px;
+}
+
+.introduction-text{
+	font: 60px 'Montserrat';
+	margin: 0px 0px;
+	color: #28393D;
+	
+}
+.major-text{
+	font: 15px 'Roboto';
+	color: #28393D;
+	padding-bottom: 7%;
+	margin-top: 0px;
+}
+
+.see-work{
+	border-radius: 5px;
+	height: 30px;
+	width: 100px;
+	background: #A1752D;
+	border: none;
+	bottom: 0px;
+	margin-right: 10px;
+	font: 15px 'Roboto';
+	color: #28393D;
+}
+
+.about-me{
+	border-radius: 5px;
+	height: 30px;
+	width: 90px;
+	background: #A1752D;
+	border: none;
+	bottom: 0px;
+	margin: 0px;
+	border: #A1752D;
+	font: 15px 'Roboto';
+	color: #28393D;
+}
+
+.nav-buttons{
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+
+.picture{
+	width: 50%;
+	height: auto;
+}
+.resumepicture{
+	position: absolute;
+	right: 5%;
+	bottom: 0px;
+	height: 70%;
+	width: auto;
+}
+
+
+/* about page classes*/
+
+.about-body{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin-left: 15%;
+	margin-right: 20%;
+	margin-top: 20px;
+}
+.about-picture{
+	width: 90%;
+	height: auto;
+}
+.about-text{
+	padding-top: 10%;
+	font: 25px 'Montserrat';
+	margin: 0px 0px;
+	color: #28393D;
+}
+
+.Linkedin-link img{
+	width: 50px;
+	height: auto;
+}
+/* media window sizing*/
+
+@media (min-width: 900px) and (max-width: 1600px){
+
+	.picture{height: 50%; width: auto;}	
+	.company-grid-view{
+		margin: 0px 10%;
+		display: grid;
+		width: 80%;
+		grid-template-columns: auto auto;
+		image-rendering: optimizeQuality;
+	}
+	.company-view{
+		background:#AAB3AA;
+		width: 100%;
+		height: 95%;
+		background-size: cover;
+	}
+}
+/* This is a mobile restriction that removes the picture if size is less than 900px*/
+
+@media screen and (max-width: 900px){
+
+	.picture{height: 50%; width: auto; display: none;}	
+	.company-grid-view{
+		margin: 0px 10%;
+		display: grid;
+		width: 80%;
+		grid-template-columns: auto;
+		image-rendering: optimizeQuality;
+	}
+	.company-view{
+		background:#AAB3AA;
+		width: 100%;
+		height: 95%;
+		background-size: cover;
+	}
+}

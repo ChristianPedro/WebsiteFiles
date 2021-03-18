@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    
+</head>
+<body >
+    
+    <div class="container">
+    <div class="homeItem" id="home">
+        <div class="text-and-button-box">
+            <div class="introduction">
+                <h1 class="introduction-text">Hello, I'm Christian</h1>
+                <h3 class="major-text">Software Engineering Major</h3>
+                <button onclick="homeToProjects()" class="see-work">See My Work</button>
+                <button onclick="homeToAbout()" class="about-me">About Me</button>
+            </div>
+            <div class="nav-buttons">
+                
+            </div>
+        </div>
+    </div>
+    <div class="projectsItem" id="projects">
+        <div class="company-view">
+            <center><h2 style="margin-top: 20px; padding: 20px 0px; font: 30px 'Montserrat'; color:  rgb(236, 236, 229);">Current Projects </h2></center>
+            <div class="company-grid-view">
+                <div class="grid-item">
+                    <img src="WebsiteThumbnail.png">
+                    <div class="mask">
+                        <div class="mask-text">
+                            <h3 style="right: 10px; left: 10px; top:  ; font: 20px 'Montserrat'; color:  rgb(236, 236, 229); position: absolute;">This project is built on HTML, CSS and a little JavaScript. The goal is to explore the world of web development and channel my artistic side. To test and make sure the website is presented how I anticipated, I hosted a local server using Node.js and navigated to the website on different devices. I also let my roommates and friends tinker with the site and see how they liked it. The website is also meant to be a catalyst for the current projects I am working on that I find neat.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="Chat App Mock Up.png">
+                    <div class="mask">
+                        <div class="mask-text">
+                            <h3 style="right: 10px; left: 10px; top:  ; font: 20px 'Montserrat'; color:  rgb(236, 236, 229); position: absolute;">This project is an experiment. The goal is to create an online chat app to experiment with Node.js and Socket.io and get a more well rounded knowledge of the two libraries. This project is still in the works but I am excited to see where it goes. Hopefully if it goes well, I would like to impliment voice to and see how steaming audio works.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="Card Game Thumbnail.png">
+                    <div class="mask">
+                        <div class="mask-text">
+                            <h3 style="right: 10px; left: 10px; top:  ; font: 20px 'Montserrat'; color:  rgb(236, 236, 229); position: absolute;">This project is actually pretty new. I have just started collecting cards and prompts for the game. The premise of the game is everyone playing can connect to a website, where you enter in your name and everyone get the same prompt. You can either finish a phrase, answer a question or create your own prompt. It is meant to be a fun interactive game that is streamed to each device. I am still looking for new technologies for this project, Node.js and Socket.io will be my safety net if I cannot find something new to use.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="homeButton" onclick="projectsToHome()"><img src="PreviousArrow.png"><h3>Home</h3></button>
+            <button class="aboutButton" onclick="ProjectsToAbout()"><h3>About</h3><img src="nextArrow.png"></button>
+        </div>
+        
+    </div>
+
+    <div class="aboutItem" id="about">
+        <div class="About-body">
+            <h2 style="padding: 50px 0px; font: 30px 'Montserrat'; color:  #B19F9E; display: flex; justify-content: center;">Christian Pedro</h2>
+                <h2 class="about-text">Hello! My name is Christian Pedro. I am currently a Software Engineering student at Drexel University. I enjoy spending time playing soccer and working on new projects. I am currently working on 3 projects that I am really excited about. You can see mockups of my current ongoing projects by hitting the back button. To hear more about my story or receive my resume, feel free to contact me.</h2>
+                <div class="contact">
+                    <h2 style="padding-top: 15px 0px; font: 30px 'Montserrat'; color: #B19F9E;">Contact Me:</h2>
+                    <h3 style="font: 15px 'Montserrat'; color:  #B19F9E;">Email: ccp57@drexel.edu</h3>
+                    <a class="Linkedin-link" href="https://www.linkedin.com/in/christian-pedro"><img src="LinkedInLogo.png"></a>
+                </div>
+            </div>
+            <button class="homeButton" onclick="AboutToHome()"><img src="PreviousArrow.png"><h3>Home</h3></button>
+            
+    </div>
+    </div>
+
+</body>
+<script>
+    function homeToProjects(){
+        document.getElementById("home").classList.add('inactive');
+        //
+        setTimeout( function() {
+            document.getElementById("home").style.display='none';
+            //document.getElementById("projects").style.scale = ;
+            document.getElementById("projects").classList.add('active');
+            
+        },800);
+                
+    }
+    function ProjectsToAbout(){
+        document.getElementById("projects").classList.remove('active');
+        document.getElementById("projects").classList.add('inactive');
+        document.getElementById("about").classList.remove('inactive');
+        document.getElementById("about").style.display='flex';
+        setTimeout( function() {
+            document.getElementById("projects").style.display='none';
+            //document.getElementById("projects").style.scale = ;
+            document.getElementById("about").classList.add('active');
+            
+        },800);
+        
+    }
+    function AboutToHome(){
+        
+        document.getElementById("projects").classList.remove('active');
+        document.getElementById("projects").classList.remove('inactive');
+        document.getElementById("about").classList.remove('inactive');
+        document.getElementById("about").classList.remove('active');
+        document.getElementById("home").classList.remove('inactive');
+        document.getElementById("projects").style.display='none';
+        document.getElementById("home").style.display='flex';
+        document.getElementById("projects").style.display='flex';
+        document.getElementById("about").style.display='flex';
+        setTimeout( function() {
+            
+            //document.getElementById("projects").style.scale = ;
+            document.getElementById("home").classList.add('active');
+            
+        },800);
+        setTimeout( function() {
+            
+            //document.getElementById("projects").style.scale = ;
+            document.getElementById("home").classList.remove('active');
+            
+        },900);
+        
+    }
+    function projectsToHome(){
+        document.getElementById("projects").classList.remove('active');
+        document.getElementById("projects").classList.remove('inactive');
+        document.getElementById("about").classList.remove('inactive');
+        document.getElementById("about").classList.remove('active');
+        document.getElementById("home").classList.remove('inactive');
+        
+        setTimeout( function() {
+            
+            //document.getElementById("projects").style.scale = ;
+            document.getElementById("home").classList.add('active');
+            
+        },800);
+        setTimeout( function() {
+            
+            //document.getElementById("projects").style.scale = ;
+            document.getElementById("home").classList.remove('active');
+            
+        },900);
+        setTimeout( function() {
+            //document.getElementById("projects").style.scale = ;
+            document.getElementById("home").style.display='flex';
+            
+        },1500);
+        
+    }
+    function homeToAbout(){
+        document.getElementById("home").classList.remove('active');
+        document.getElementById("home").classList.add('inactive');
+        document.getElementById("about").classList.remove('inactive');
+        document.getElementById("about").style.display='flex';
+        setTimeout( function() {
+            document.getElementById("home").style.display='none';
+            document.getElementById("projects").style.display='none';
+            //document.getElementById("projects").style.scale = ;
+            document.getElementById("about").classList.add('active');
+            
+        },800);
+        
+    }
+</script>
+
+</html>
+

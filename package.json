@@ -1,0 +1,20 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "This website is meant to be my virtual profile that host some of my passion projects that I am proud of.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^15.0.1",
+    "nodemon": "^2.0.6",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Christian Pedro",
+  "license": "ISC"
+}
